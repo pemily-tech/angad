@@ -1,14 +1,11 @@
 import '@/styles/globals.css';
-// import 'react-calendar/dist/Calendar.css';
-import 'react-datepicker/dist/react-datepicker.css';
 
+// import 'react-calendar/dist/Calendar.css';
 import { type PropsWithChildren } from 'react';
 import { type Metadata } from 'next';
 
 import Providers from '../services/providers';
 
-import 'swiper/css';
-import 'swiper/css/pagination';
 import { siteConfig } from '@/helpers/constant';
 import { fonts } from '@/helpers/fonts';
 import { cn } from '@/helpers/utils';
