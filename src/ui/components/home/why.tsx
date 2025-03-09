@@ -23,6 +23,13 @@ const data = [
 		subtitle:
 			"Streamline your clinic's operations by easily managing all client records with just a single tap.",
 	},
+	{
+		id: 3,
+		icon: '/icons/records.svg',
+		title: 'Simplified Billing & Inventory',
+		subtitle:
+			'Pemilyy enables digital invoicing, real-time payment tracking, and smart inventory management, ensuring accuracy while you focus on pet care.',
+	},
 ];
 
 export const Why = () => {
@@ -31,7 +38,7 @@ export const Why = () => {
 			<h2 className="mb-24 text-center text-[36px] font-medium leading-[44px]">
 				Why Pemilyy ?
 			</h2>
-			<div className="grid gap-[54px] lg:grid-cols-3 lg:gap-[100px]">
+			<div className="grid gap-[54px] lg:grid-cols-2 lg:gap-[20px]">
 				{data?.map((sec) => {
 					return (
 						<div
