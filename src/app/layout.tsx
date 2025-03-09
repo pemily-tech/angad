@@ -2,8 +2,8 @@ import '@/styles/globals.css';
 
 // import 'react-calendar/dist/Calendar.css';
 import { type PropsWithChildren } from 'react';
-import { GoogleTagManager } from '@next/third-parties/google';
 import { type Metadata } from 'next';
+import Script from 'next/script';
 
 import Providers from '../services/providers';
 
@@ -47,9 +47,21 @@ export const generateMetadata = (): Metadata => ({
 const RootLayout = ({ children }: PropsWithChildren) => {
 	return (
 		<html lang="en" suppressHydrationWarning>
-			<GoogleTagManager gtmId="AW-16492952746" />
 			<body className={cn('font-satoshi min-h-screen', fonts)}>
 				<Providers>{children}</Providers>
+				<Script
+					async
+					src="https://www.googletagmanager.com/gtag/js?id=AW-16492952746"
+					strategy="afterInteractive"
+				/>
+				<Script id="gtag-init" strategy="afterInteractive">
+					{`
+					window.dataLayer = window.dataLayer || [];
+					function gtag(){dataLayer.push(arguments);}
+					gtag('js', new Date());
+					gtag('config', 'AW-16492952746');
+				`}
+				</Script>
 			</body>
 		</html>
 	);
