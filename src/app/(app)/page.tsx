@@ -18,10 +18,17 @@ const Contact = dynamic(() => import('../../ui/components/home/contact'), {
 const Services = dynamic(() => import('../../ui/components/home/services'), {
 	loading: () => <Spinner />,
 });
+const ContactModal = dynamic(
+	() => import('../../ui/components/home/contact-modal'),
+	{
+		loading: () => <Spinner />,
+	}
+);
 
 export default function Page() {
 	return (
 		<div>
+			<ContactModal />
 			<Hero />
 			<Services />
 			<Why />
