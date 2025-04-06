@@ -20,7 +20,7 @@ import {
 import { FloatingInput } from '../../shared/input';
 
 const schema = z.object({
-	name: z.string().min(3, 'Name is required'),
+	name: z.string().min(3, 'Name is required '),
 	mobileNumber: z
 		.string()
 		.regex(/^[6-9]\d{9}$/, 'Please enter a valid mobile number')
