@@ -43,11 +43,13 @@ export const Contact = () => {
 	const [show, setShow] = useState(true);
 
 	useEffect(() => {
+		setShow(!show);
 		if (!result?.data) return;
 
 		if (result?.data?.status === 'SUCCESS') {
 			form?.reset();
 			toast.success('Data submitted successfully!');
+			setShow(!show);
 		} else {
 			toast.error('Please try again.');
 		}
