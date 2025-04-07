@@ -43,7 +43,6 @@ export const Contact = () => {
 	const [show, setShow] = useState(true);
 
 	useEffect(() => {
-		setShow(!show);
 		if (!result?.data) return;
 
 		if (result?.data?.status === 'SUCCESS') {
