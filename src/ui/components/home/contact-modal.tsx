@@ -93,7 +93,6 @@ export const Contact = () => {
 													id="name"
 													placeholder=""
 													isError={!!fieldState.error}
-													maxLength={10}
 													{...field}
 												/>
 											</FormControl>
@@ -132,7 +131,6 @@ export const Contact = () => {
 													id="message"
 													placeholder=""
 													isError={!!fieldState.error}
-													maxLength={10}
 													{...field}
 												/>
 											</FormControl>
